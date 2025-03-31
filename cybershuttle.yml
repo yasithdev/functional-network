@@ -1,0 +1,36 @@
+project:
+  name: Stimulus type shapes the topology of cellular functional networks in mouse visual cortex
+  version: 1.0.0
+  description: This repository contains the code and data to reproduce the results presented in the paper "Stimulus type shapes the topology of cellular functional networks in mouse visual cortex."
+  tags:
+    - neuroscience
+    - visual_cortex
+    - cellular_functional_networks
+  homepage: https://github.dev/HChoiLab/functional-network
+
+environment:
+  dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - "numpy==1.23.5"
+    - "scipy==1.9.3"
+    - "pandas==1.5.2"
+    - "statsmodels==0.13.2"
+    - "networkx==2.8.8"
+    - "python-louvain==0.16"
+    - "netgraph==4.10.2"
+    - "scikit-learn==1.1.3"
+    - "upsetplot==0.8.0"
+
+workspace:
+  location: /workspace
+  resources:
+    min_cpu: 1
+    min_gpu: 0
+    min_mem: 16G
+    min_disk: 2G
+  data_sources:
+    - type: cybershuttle
+      identifier: <SUBSTITUTE_CORRECT_ID>
+      mount_point: /workspace/data
